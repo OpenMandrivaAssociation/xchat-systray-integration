@@ -1,0 +1,26 @@
+--- src/menu.c~	2006-09-10 22:19:50.000000000 +0200
++++ src/menu.c	2006-09-11 15:44:56.000000000 +0200
+@@ -10,7 +10,6 @@
+ 	char command[156]="exec ";
+ 	strcat(command, bpath);
+ 	xchat_command( ph, command );
+-	g_free(command);
+ 
+ }
+ 
+@@ -20,7 +19,6 @@
+ 	char command[156]="exec ";
+ 	strcat(command, epath);
+ 	xchat_command( ph, command );
+-	g_free(command);
+ 
+ }
+ 
+@@ -30,7 +28,6 @@
+ 	char command[156]="exec ";
+ 	strcat(command, ppath);
+ 	xchat_command( ph, command );
+-	g_free(command);
+ 
+ }
+ 

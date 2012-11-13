@@ -1,0 +1,24 @@
+--- ./src/systray.c~	2004-04-30 14:38:10.000000000 +0200
++++ ./src/systray.c	2005-06-25 15:53:10.000000000 +0200
+@@ -190,8 +190,7 @@
+ 	char temp[200];
+ 	if (filename && type) 
+ 	{
+-		if (imagepath) sprintf(temp,"%s/%s/%s", imagepath ,type,filename);
+-		else sprintf(temp,"%s/%s/%s", xchat_get_info(ph, "xchatdir"),type,filename);
++		sprintf(temp,"/usr/share/xchat-systray-integration/%s/%s", type, filename);
+ #ifdef _WIN32_			
+ 		tempbuffer= ((HICON)LoadImage( tray_inst, temp, IMAGE_ICON, 16, 16, LR_LOADFROMFILE ));
+ #else	
+--- ./src/menu.c~	2004-04-30 14:38:10.000000000 +0200
++++ ./src/menu.c	2005-06-25 15:51:09.000000000 +0200
+@@ -91,8 +91,7 @@
+ 	char temp[200];
+ 	if (filename) 
+ 	{
+-		if (imagepath) sprintf(temp,"%s/Menu/%s", imagepath ,filename);
+-		else sprintf(temp,"%s/Menu/%s", xchat_get_info(ph, "xchatdir"),filename);
++		sprintf(temp,"/usr/share/xchat-systray-integration/Menu/%s", filename);
+ 		tempbuffer= gdk_pixbuf_new_from_file(temp,NULL);
+ 		return tempbuffer;
+ 	}

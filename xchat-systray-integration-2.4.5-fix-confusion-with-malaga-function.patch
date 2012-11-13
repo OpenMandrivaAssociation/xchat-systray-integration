@@ -1,0 +1,80 @@
+--- src/systray.c~	2005-01-04 17:48:53.000000000 +0100
++++ src/systray.c	2006-08-27 17:59:26.000000000 +0200
+@@ -185,7 +185,7 @@
+ 	xchat_printf(ph, "Patrizio Bassi - hetfield666@virgilio.it - http://www.blight.tk");
+ 
+ 	//set apps variables, only on start
+-	get_info( TRUE,TRUE );
++	systray_get_info( TRUE,TRUE );
+ 	servers_names = g_hash_table_new( NULL,NULL );
+ #ifndef _WIN32_
+ 	window_manager_modified=KDE;
+--- src/data_manager.c~	2005-01-04 17:48:53.000000000 +0100
++++ src/data_manager.c	2006-08-27 17:58:55.000000000 +0200
+@@ -56,7 +56,7 @@
+ }
+ 
+ //get apps path & settings
+-void get_info (gboolean onstart_warning,gboolean control) {
++void systray_get_info (gboolean onstart_warning,gboolean control) {
+ 	FILE *systray;
+ 	char path[150];
+ 	int len,check;
+@@ -193,7 +193,7 @@
+ #endif
+ 	xchat_print(ph, "\nIf you want to change settings, please select Settings again.");
+ 	write2file(TRUE);
+-	get_info(FALSE,FALSE);
++	systray_get_info(FALSE,FALSE);
+ }
+ 
+ 
+--- src/data_manager.h~	2004-04-30 14:38:10.000000000 +0200
++++ src/data_manager.h	2006-08-27 18:30:01.000000000 +0200
+@@ -33,7 +33,7 @@
+ gboolean killevent;
+ 
+ void write2file(gboolean control);
+-void get_info (gboolean onstart_warning,gboolean control);
++void systray_get_info (gboolean onstart_warning,gboolean control);
+ void save();
+ 
+ #endif
+--- src/settings.c~	2004-04-30 14:38:10.000000000 +0200
++++ src/settings.c	2006-08-27 18:49:32.000000000 +0200
+@@ -66,7 +66,7 @@
+ //delete setting window and reload real values.
+  void set_tray_delete() {
+ 
+-	get_info(FALSE,FALSE);
++	systray_get_info(FALSE,FALSE);
+ 
+ }
+ 
+@@ -169,7 +169,7 @@
+ 
+ 	flash_interval=gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(spinbutton));
+ 	write2file(FALSE);
+-	get_info(FALSE,FALSE);
++	systray_get_info(FALSE,FALSE);
+ 
+ }
+ 
+@@ -194,7 +194,7 @@
+ 	GSList *group;
+ 	GtkAdjustment *adj;
+ 
+-	get_info(FALSE,FALSE);
++	systray_get_info(FALSE,FALSE);
+ 
+ 	//create box and window
+ 	window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+@@ -478,7 +478,7 @@
+ 	GtkWidget *label;
+ 	GSList *group;
+ 
+-	get_info(FALSE,FALSE);
++	systray_get_info(FALSE,FALSE);
+ 
+ 	//create box and window
+ 	window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
