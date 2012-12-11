@@ -54,3 +54,56 @@ rm -rf %{buildroot}
 %{_datadir}/%{name}
 %{_libdir}/xchat/plugins/*
 
+
+
+%changelog
+* Wed Sep 09 2009 Thierry Vignaud <tvignaud@mandriva.com> 2.4.5-10mdv2010.0
++ Revision: 435059
+- rebuild
+
+* Sun Aug 03 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.4.5-9mdv2009.0
++ Revision: 262285
+- rebuild
+
+* Thu Jul 31 2008 Thierry Vignaud <tvignaud@mandriva.com> 2.4.5-8mdv2009.0
++ Revision: 256686
+- rebuild
+
+* Fri Dec 21 2007 Olivier Blin <oblin@mandriva.com> 2.4.5-6mdv2008.1
++ Revision: 136578
+- restore BuildRoot
+
+  + Thierry Vignaud <tvignaud@mandriva.com>
+    - kill re-definition of %%buildroot on Pixel's request
+
+
+* Tue Sep 12 2006 Guillaume Bedot <littletux@mandriva.org> 2.4.5-6mdv2007.0
+- patch1: back to the rename get_info solution
+- patch2: fix crashes when lauching apps from the tray
+
+* Sun Sep 10 2006 Guillaume Bedot <littletux@mandriva.org> 2.4.5-5mdv2007.0
+- drop previous patch for a better fix
+
+* Sat Sep 09 2006 Guillaume Bedot <littletux@mandriva.org> 2.4.5-4mdv2007.0
+- %%mkrel
+- fix bug #24697
+
+* Sun Jun 26 2005 Pascal Terjan <pterjan@mandriva.org> 2.4.5-3mdk
+- add -fPIC
+- move data to %%{_datadir}
+
+* Sat Jun 25 2005 Pascal Terjan <pterjan@mandriva.org> 2.4.5-2mdk
+- Enforce image path
+- Don't ship Win32 icons
+- root doesn't need execution right on the icons/doc
+
+* Fri Dec 03 2004 Abel Cheung <deaddog@mandrake.org> 2.4.5-1mdk
+- New version
+- Software changed name long time ago
+- rpmbuildupdate aware URL
+
+* Mon Jan 26 2004 Abel Cheung <deaddog@deaddog.org> 2.4.0-1mdk
+- New version
+- Use MDK CFLAGS
+- (Should this package change name?)
+
