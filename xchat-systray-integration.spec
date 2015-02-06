@@ -1,5 +1,5 @@
 %define version 2.4.5
-%define release %mkrel 10
+%define release 11
 
 Summary: 	Systray (Notification Area) Plugin for XChat
 Name:		xchat-systray-integration
