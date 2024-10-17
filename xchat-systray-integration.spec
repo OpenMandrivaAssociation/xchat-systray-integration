@@ -11,7 +11,7 @@ Patch1:		xchat-systray-integration-2.4.5-fix-confusion-with-malaga-function.patc
 Patch2:		xchat-systray-integration-2.4.5-fix-double-free-crashes.patch
 License:	GPL
 Group:		Networking/IRC
-Url:		http://blight.altervista.org/
+Url:		https://blight.altervista.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	xchat >= 2.0.4
 BuildRequires:	gtk2-devel
