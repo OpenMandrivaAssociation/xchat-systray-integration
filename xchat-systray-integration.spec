@@ -14,6 +14,7 @@ Group:		Networking/IRC
 Url:		https://blight.altervista.org/
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:	xchat >= 2.0.4
+BuildRequires:	make
 BuildRequires:	gtk2-devel
 Obsoletes:	xchat-systray-plugin
 Provides:	xchat-systray-plugin
